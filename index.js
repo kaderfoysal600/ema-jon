@@ -51,7 +51,7 @@ client.connect(err => {
     })
   })
 
-  pp.post('/addOrder', (req,res) =>{
+  app.post('/addOrder', (req,res) =>{
     const order = req.body;
     ordersCollection.insertMany(order)
     .then(result =>{
